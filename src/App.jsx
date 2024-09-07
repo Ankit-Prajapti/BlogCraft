@@ -4,6 +4,7 @@ import BlogShow from "./components/BlogShow";
 import CreateBlog from "./components/CreateBlog";
 import BlogEdit from "./components/BlogEdit";
 import { useState } from "react";
+import BlogList from "./components/BlogList";
 
 function App() {
   const [allBlogs, setAllBlogs] = useState([
@@ -13,6 +14,13 @@ function App() {
       time: "Now",
       author: "json",
       id: "1",
+    },
+    {
+      title: "Third",
+      content: "Making  post reques",
+      time: "Now",
+      author: "json",
+      id: "85",
     },
     {
       id: "2",
@@ -56,6 +64,7 @@ function App() {
     })
 
     console.log("AppUpdateBlog : ",updateBlog)
+    setAllBlogs(updateBlog);
   }
 
   return (
@@ -65,9 +74,9 @@ function App() {
       </div>
 
       <Routes>
-        <Route path="/" element={<BlogShow />} />
+        <Route path="/" element={<BlogList blogData={allBlogs} editBlog={updateBlog} />} />
         <Route path="/about" element={<CreateBlog onCreate={addBlog}/>} />
-        <Route path="/contact" element={<BlogEdit />} />
+        {/* <Route path="/contact" element={<BlogEdit />} /> */}
       </Routes>
     </BrowserRouter>
   );

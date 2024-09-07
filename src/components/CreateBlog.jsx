@@ -18,13 +18,14 @@ function CreateBlog({onCreate}) {
   };
 
   const getDate = () => {
+    const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
     const date = new Date(); // Get the current date
   
-    const day = String(date.getDate()).padStart(2, '0'); // Get day (1-31) and pad to 2 digits
-    const month = String(date.getMonth() + 1).padStart(2, '0'); // Get month (0-11), add 1 and pad to 2 digits
+    const day = String(date.getDate()); // Get day (1-31) and pad to 2 digits
+    const month = String(months[date.getMonth()] ); // Get month (0-11), add 1 and pad to 2 digits
     const year = String(date.getFullYear()).slice(-2); // Get last two digits of the year
   
-    return `${day}/${month}/${year}`;
+    return `${day} ${month} ${year}`;
   };
 
 
@@ -34,7 +35,7 @@ function CreateBlog({onCreate}) {
     const mins = date.getMinutes().toString().padStart(2, "0");
     const secs = date.getSeconds().toString().padStart(2, "0");
 
-    return `${hrs}:${mins}:${secs}`;
+    return `${hrs}:${mins}`;
 
   }
 

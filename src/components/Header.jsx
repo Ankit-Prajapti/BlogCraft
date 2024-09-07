@@ -14,10 +14,10 @@ function Header() {
               <Link to="/">Home</Link>
             </li>
             <li className=" inline">
-              <Link to="/about">About Us</Link>
+              <Link to="/about">Create</Link>
             </li>
             <li className=" inline">
-              <Link to="/contact">Contact Us</Link>
+              <Link to="/contact">Edit</Link>
             </li>
             <li className=" inline">
                 icon
