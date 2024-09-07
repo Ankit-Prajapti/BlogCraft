@@ -1,0 +1,27 @@
+ 
+
+GET http://localhost:3001/blogs  HTTP/1.1
+Content-Type: application/json
+
+###
+
+POST http://localhost:3001/blogs  
+Content-Type: application/json
+
+{
+    "title": "Third",
+    "content": "Making a post reques",
+    "time": "Now",
+    "author": "json"
+} 
+
+###
+PUT http://localhost:3001/blogs/1  
+Content-Type: application/json
+
+{
+    "title": "Third",
+    "content": "Making a post reques",
+    "time": "Now",
+    "author": "json"
+} 
