@@ -16,7 +16,7 @@ function BlogEdit({ blog, onCancle, onSave }) {
 
   const handleSave = (e) => {
     e.preventDefault();
-    onSave();
+    onSave(blog.id, editedBlog);
   };
 
   return (
@@ -46,14 +46,14 @@ function BlogEdit({ blog, onCancle, onSave }) {
         <button
           type="button"
           onClick={handleCancel}
-          className="bg-gray-300 text-gray-800 px-3 py-1 rounded text-sm hover:bg-gray-400"
+          className="bg-customGreen text-gray-800 px-3 py-1 rounded text-sm hover:bg-gray-400"
         >
           Cancel
         </button>
         <button
           type="button"
           onClick={handleSave}
-          className="bg-green-500 text-white px-3 py-1 rounded text-sm hover:bg-green-600"
+          className="bg-customGrey text-white px-3 py-1 rounded text-sm hover:bg-green-700"
         >
           Save
         </button>

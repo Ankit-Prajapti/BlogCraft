@@ -7,10 +7,12 @@ function BlogShow({ blog, editBlog }) {
 
 
 
-  const handleSave = () => {
+  const handleSave = (id, data) => {
+    editBlog(id, data)
    
     
     setIsEditing(false);
+    
   };
 
   const handleCancel = () => {
