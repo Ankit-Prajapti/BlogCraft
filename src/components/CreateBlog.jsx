@@ -25,7 +25,7 @@ function CreateBlog({onCreate}) {
     const month = String(months[date.getMonth()] ); // Get month (0-11), add 1 and pad to 2 digits
     const year = String(date.getFullYear()).slice(-2); // Get last two digits of the year
   
-    return `${day} ${month} ${year}`;
+    return `${day}-${month}-${year}`;
   };
 
 
@@ -35,7 +35,7 @@ function CreateBlog({onCreate}) {
     const mins = date.getMinutes().toString().padStart(2, "0");
     const secs = date.getSeconds().toString().padStart(2, "0");
 
-    return `${hrs}:${mins}`;
+    return `${hrs}:${mins}hrs`;
 
   }
 

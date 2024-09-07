@@ -1,7 +1,7 @@
 import { useState } from "react";
 import BlogEdit from "./BlogEdit";
 
-function BlogShow({ blog, editBlog }) {
+function BlogShow({ blog, editBlog , deleteBlog}) {
   const [isEditing, setIsEditing] = useState(false);
   
 
@@ -32,13 +32,13 @@ function BlogShow({ blog, editBlog }) {
               <button className="bg-blue-500 text-white px-2 py-1 rounded text-sm" onClick={() => setIsEditing(true)}>
                 Edit
               </button>
-              <button className="bg-red-500 text-white px-2 py-1 rounded text-sm">
+              <button className="bg-red-500 text-white px-2 py-1 rounded text-sm" onClick={() => deleteBlog(blog.id)}>
                 Delete
               </button>
             </div>
           </div>
-          <p className="text-sm text-gray-600 mb-2">
-            {blog.date} {blog.time}
+          <p className="text-sm text-gray-600 mb-2 text-right">
+            {blog.date}   {blog.time}
           </p>
           <div className="overflow-y-auto flex-grow custom-scrollbar">
             <p className="text-gray-800">{blog.content}</p>

@@ -74,7 +74,7 @@ function App() {
       </div>
 
       <Routes>
-        <Route path="/" element={<BlogList blogData={allBlogs} editBlog={updateBlog} />} />
+        <Route path="/" element={<BlogList blogData={allBlogs} editBlog={updateBlog} deleteBlog={deleteBlog}/>} />
         <Route path="/about" element={<CreateBlog onCreate={addBlog}/>} />
         {/* <Route path="/contact" element={<BlogEdit />} /> */}
       </Routes>
